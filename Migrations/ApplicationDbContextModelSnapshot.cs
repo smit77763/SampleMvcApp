@@ -37,23 +37,23 @@ namespace SampleMvc.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SubjectId")
+                    b.Property<int>("SubjectID")
                         .HasColumnType("int");
 
                     b.HasKey("StudentId");
 
-                    b.HasIndex("SubjectId");
+                    b.HasIndex("SubjectID");
 
                     b.ToTable("Student");
                 });
 
             modelBuilder.Entity("SampleMvc.Models.Subject", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("SubjectID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubjectID"), 1L, 1);
 
                     b.Property<string>("Subject_Name")
                         .IsRequired()
@@ -63,10 +63,9 @@ namespace SampleMvc.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("syllabus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("SubjectID");
 
                     b.ToTable("Subject");
                 });
@@ -75,7 +74,7 @@ namespace SampleMvc.Migrations
                 {
                     b.HasOne("SampleMvc.Models.Subject", "Subject")
                         .WithMany()
-                        .HasForeignKey("SubjectId")
+                        .HasForeignKey("SubjectID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

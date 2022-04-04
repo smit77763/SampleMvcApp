@@ -49,6 +49,7 @@ namespace SampleMvc.Controllers
         [HttpPost]
         public IActionResult Create([Bind("Name,Class,SubjectID")] Student studobj)
         {
+            Console.WriteLine(studobj);
             if (ModelState.IsValid)
             {
                 _db.Student.Add(studobj);

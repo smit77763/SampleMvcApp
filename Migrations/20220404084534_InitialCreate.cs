@@ -12,15 +12,15 @@ namespace SampleMvc.Migrations
                 name: "Subject",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    SubjectID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Subject_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    syllabus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    syllabus = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     credits = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Subject", x => x.ID);
+                    table.PrimaryKey("PK_Subject", x => x.SubjectID);
                 });
 
             migrationBuilder.CreateTable(
@@ -31,23 +31,23 @@ namespace SampleMvc.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Class = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SubjectId = table.Column<int>(type: "int", nullable: false)
+                    SubjectID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Student", x => x.StudentId);
                     table.ForeignKey(
-                        name: "FK_Student_Subject_SubjectId",
-                        column: x => x.SubjectId,
+                        name: "FK_Student_Subject_SubjectID",
+                        column: x => x.SubjectID,
                         principalTable: "Subject",
-                        principalColumn: "ID",
+                        principalColumn: "SubjectID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_SubjectId",
+                name: "IX_Student_SubjectID",
                 table: "Student",
-                column: "SubjectId");
+                column: "SubjectID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

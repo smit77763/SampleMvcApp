@@ -25,7 +25,7 @@ namespace SampleMvc.Models
 
         public int SubjectID { get; set; }
 
-        public virtual Subject Subject { get; set; }
+        public virtual Subject ? Subject { get; set; }
 
     }
 }
