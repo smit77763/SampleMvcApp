@@ -81,6 +81,7 @@ namespace SampleMvc.Controllers
         {
             
            var  studobj = _db.Student.Find(id);
+            PopulateSubjectsDropDownList(); 
             return View(studobj);
         }
 
