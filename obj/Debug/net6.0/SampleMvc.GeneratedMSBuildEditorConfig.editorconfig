@@ -31,10 +31,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Professional/Study Materials/SEM 6/DOT-NET/SampleMvc/Views/shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Professional/Study Materials/SEM 6/DOT-NET/SampleMvc/Views/shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,3 +70,7 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Professional/Study Materials/SEM 6/DOT-NET/SampleMvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Professional/Study Materials/SEM 6/DOT-NET/SampleMvc/Views/shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zj5kq7in8w

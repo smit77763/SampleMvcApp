@@ -5,6 +5,12 @@
         <div class="col-8">
             <h2 class="text-primary">Student List</h2>
         </div>
+         <form asp-controller="Student" asp-action="Index">
+          <p>
+             Name : <input type="text" name="searchString" />
+             <input type="submit" value="Filter">
+         </p>
+        </form> 
         <a asp-controller="Student" asp-action="Create" class="btn btn-primary">
             Create New Student
         </a>

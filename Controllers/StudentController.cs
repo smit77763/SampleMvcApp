@@ -2,10 +2,6 @@
 using SampleMvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SampleMvc.data;
 
@@ -31,12 +27,30 @@ namespace SampleMvc.Controllers
 
         }
 
-        public IActionResult Index()
-        {
+        // public IActionResult Index()
+        // {
       
+        //     IEnumerable<Student> objList = _db.Student;
+        //     return View(objList);
+        // }
+
+          public IActionResult Index(string searchString)
+        {
+
             IEnumerable<Student> objList = _db.Student;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                objList = objList.Where(s => s.Name.Contains(searchString));
+                Console.WriteLine("valid");
+
+            }
+            else{
+                Console.WriteLine("Invalid");
+            }
             return View(objList);
         }
+
 
         //Get Create
         public IActionResult Create()

@@ -17,12 +17,23 @@ namespace SampleMvc.Controllers
         {
             _db = db;
         }
-        public IActionResult Index()
-        {
-            IEnumerable<Subject> listofsubjects = _db.Subject;
-            return View(listofsubjects);
-        }
+        // public IActionResult Index()
+        // {
+        //     IEnumerable<Subject> listofsubjects = _db.Subject;
+        //     return View(listofsubjects);
+        // }
 
+        public IActionResult Index(string searchString)
+        {
+
+            IEnumerable<Subject> objList = _db.Subject;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                objList = objList.Where(s => s.Subject_Name.Contains(searchString));
+            }
+            return View(objList);
+        }
 
          public IActionResult Create()
         {

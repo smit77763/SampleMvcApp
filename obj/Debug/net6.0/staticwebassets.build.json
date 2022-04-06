@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7IFxaWLm2XXEw5WUuDwBvmipTe0HW483xiHz0Azuh38=",
+  "Hash": "H+jeQUx8IzIoKr7np2g+B2vxfLE8GqDyy6aEzzQmYsI=",
   "Source": "SampleMvc",
   "BasePath": "_content/SampleMvc",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SampleMvc.styles.css",
+      "SourceId": "SampleMvc",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/SampleMvc",
+      "RelativePath": "SampleMvc.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SampleMvc.styles.css"
+    },
+    {
+      "Identity": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SampleMvc.bundle.scp.css",
+      "SourceId": "SampleMvc",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/SampleMvc",
+      "RelativePath": "SampleMvc.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SampleMvc.bundle.scp.css"
+    },
     {
       "Identity": "D:\\Professional\\Study Materials\\SEM 6\\DOT-NET\\SampleMvc\\wwwroot\\css\\site.css",
       "SourceId": "SampleMvc",

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<SampleMvc.Models.Subject>
 
 @{
- ViewData["Title"] = "Subject";
+    ViewData["Title"] = "Subject";
 }
 
 <div class="container p-3">
@@ -9,9 +9,19 @@
         <div class="col-8">
             <h2 class="text-primary">Subject List</h2>
         </div>
-       <a asp-controller="Subject" asp-action="Create" class="btn btn-primary">
+        <form asp-controller="Subject" asp-action="Index">
+            <br>
+            <p>
+                Search Subject : <input type="text" name="searchString" />
+                <input type="submit" value="Filter">
+            </p>
+        </form>
+        <a asp-controller="Subject" asp-action="Create" class="btn btn-primary">
             Create New Subject
         </a>
+
+
+
     </div>
     <br />
     @if (Model.Count() > 0)
@@ -29,12 +39,14 @@
                 @foreach (var obj1 in Model)
                 {
                     <tr>
-                        <td width="50%">@obj1.Subject_Name</td>
+                        <td width="30%">@obj1.Subject_Name</td>
                         <td>@obj1.syllabus</td>
                         <td>@obj1.credits</td>
                         <td>
-                           <a asp-controller="Subject" asp-action="Edit" asp-route-subjectid="@obj1.SubjectID" class="btn btn-primary">Edit</a>
-                            <a asp-controller="Subject" asp-action="Delete" asp-route-subjectid="@obj1.SubjectID" class="btn btn-primary">Delete</a>
+                            <a asp-controller="Subject" asp-action="Edit" asp-route-subjectid="@obj1.SubjectID"
+                        class="btn btn-primary">Edit</a>
+                            <a asp-controller="Subject" asp-action="Delete" asp-route-subjectid="@obj1.SubjectID"
+                        class="btn btn-primary">Delete</a>
                         </td>
                     </tr>
                 }
@@ -46,4 +58,3 @@
         <p> No subject details.</p>
     }
 </div>
-
